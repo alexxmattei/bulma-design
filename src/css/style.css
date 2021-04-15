@@ -1,2 +1,18 @@
-@import 'bulma/css/bulma.css'
+@import 'bulma/css/bulma.css';
 
+.center-simple-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.text-main-landing {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.text-secondary-landing {
+    font-weight: 200;
+    font-size: 20px;
+}
