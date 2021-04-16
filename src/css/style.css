@@ -1,5 +1,16 @@
 @import 'bulma/css/bulma.css';
 
+:root {
+    --site-blue: #1c28d3;
+    --site-white: #fff2e6;
+    --site-white-transparent: #d3d3d3dc;
+    --site-pure-white: #ffffff;
+    
+    --site-primary: rgb(65, 250, 194);
+}
+
+body { background-color: var(--site-pure-white); }
+
 .center-simple-landing {
     display: flex;
     justify-content: center;
@@ -15,4 +26,28 @@
 .text-secondary-landing {
     font-weight: 200;
     font-size: 20px;
+}
+
+.container-rounded {
+    border-radius: 25px;
+}
+
+.container-rounded-mini {
+    border-radius: 15px;
+}
+
+.section-distance-self-top {
+    margin: 20px 0 0 0;
+}
+
+.section-distance-self-all {
+     margin: 20px 10px 0px 10px;
+}
+
+.section-round-self {
+    border-radius: 15px;
+}
+
+.color-me-primary-bk {
+    background-color: var(--site-primary);
 }
