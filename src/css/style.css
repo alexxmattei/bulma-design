@@ -89,3 +89,74 @@ body { background-color: var(--site-pure-white); }
 .has-padding-top {
     padding-top: 35px;
 }
+
+.code-snippet-small {
+ 
+        padding: 0 20px;
+        text-align: justify;
+
+        height: 300px;
+}
+
+/* coffee svg @codepen */
+
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+.cup-container{
+   transform: translate(-50%, 0%);
+   position: absolute;
+   top: 90%;
+   left: 50%;
+}
+.sip-text {
+   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 57.5%;
+   left: 49%;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 40px;
+   color: #4c0000;
+   text-shadow: -1px -1px 0 #423f3f, -1px 1px 0 #464343, 1px -1px 0 #888888, 1px 1px 0 #616161;
+}
+
+/* ANIMATE LIQUID FILL */
+.liquid {
+   transform: translateX(100%);
+   transform: translateY(100%);
+   opacity: 0.8;
+   animation: fill 2.8s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes fill {
+   0%{
+      opacity: 0.8;
+      transform: translateY(100%);
+   }
+   100%{
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* ANIMATE STEAM */
+.steam {
+   stroke: #F7F7F7;
+   stroke-width: 1.5px;
+   stroke-dasharray: 200;
+   stroke-dashoffset: 200;
+   opacity: 0.2;
+   animation: steamAnimate 2.5s;
+   animation-delay: 3.3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes steamAnimate{
+	0%{
+		stroke-dashoffset: 200;
+	}
+	  
+	100%{
+		stroke-dashoffset: 0;
+	}
+}
