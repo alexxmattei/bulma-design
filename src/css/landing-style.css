@@ -5,11 +5,14 @@
     --site-white: #fff2e6;
     --site-white-transparent: #d3d3d3dc;
     --site-pure-white: #ffffff;
+    --site-pure-black: rgb(0, 0, 0);
     
     --site-primary: rgb(65, 250, 194);
 }
 
-body { background-color: var(--site-pure-white); }
+
+
+body { background-color: var(--site-pure-black); }
 
 .center-simple-landing {
     display: flex;
@@ -58,6 +61,10 @@ body { background-color: var(--site-pure-white); }
     background-color: var(--site-primary);
 }
 
+.hero {
+    background: black url("/src/assets/tesla-roadster-desktop.jpg") center / cover;
+}
+
 /* embed bulma w/ css grid */
 
 .grid {
@@ -104,70 +111,14 @@ body { background-color: var(--site-pure-white); }
     }
 }
 
-/* coffee svg @codepen */
-
-@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
-
-.cup-container{
-   transform: translate(-50%, 25%);
-   position: absolute;
-   top: 90%;
-   left: 50%;
-}
-.sip-text {
-   transform: translate(-50%, -50%);
-   position: absolute;
-   top: 90.5%;
-   left: 49%;
-   font-family: 'Courier New', Courier, monospace;
-   font-size: 40px;
-   color: #4c0000;
-   text-shadow: -1px -1px 0 #423f3f, -1px 1px 0 #464343, 1px -1px 0 #888888, 1px 1px 0 #616161;
+@media (max-width: 1024px) {
+    .hero {
+        background: black url("/src/assets/tesla-roadster-tablet.jpg") center / cover;
+    }
 }
 
-/* ANIMATE LIQUID FILL */
-.liquid {
-   transform: translateX(100%);
-   transform: translateY(100%);
-   opacity: 0.8;
-   animation: fill 3.0s;
-   animation-fill-mode: forwards;
-   animation-iteration-count: infinite;
-   animation-delay: 0 1.5s;
-}
-
-@keyframes fill {
-   0%{
-      opacity: 0.8;
-      transform: translateY(100%);
-   }
-   100%{
-      transform: translateY(0);
-      opacity: 1;
-   }
-
-}
-
-/* ANIMATE STEAM */
-.steam {
-   stroke: #463a3a;
-   stroke-width: 1.5px;
-   stroke-dasharray: 200;
-   stroke-dashoffset: 200;
-   opacity: 0.2;
-   animation: steamAnimate 2.3s;
-   animation-delay: 1.75s;
-   animation-fill-mode: forwards;
-   animation-iteration-count: infinite;
-
-}
-
-@keyframes steamAnimate{
-	0%{
-		stroke-dashoffset: 200;
-	}
-	  
-	100%{
-		stroke-dashoffset: 0;
-	}
+@media (max-width: 768px) {
+    .hero {
+        background: black url("/src/assets/tesla-roadster-mobile.jpg") center / cover;
+    }
 }
