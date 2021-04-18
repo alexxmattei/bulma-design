@@ -1,0 +1,23 @@
+#el-1 { grid-area: el-1; }
+#el-2 { grid-area: el-2; }
+#el-3 { grid-area: el-3; }
+#el-4 { grid-area: el-4; }
+#el-5 { grid-area: el-5; }
+
+#grid {
+    display: grid;
+    grid-template-areas: 
+    "el-1 el-1 el-1 el-1" 
+    "el-2 el-3 el-4 el-5";
+
+    grid-row-gap: 1rem;
+}
+
+@media (max-width: 672px) {
+    #grid {
+            grid-template-areas: 
+        "el-1 el-1 el-1" 
+        "el-2 el-3 el-4"
+        "el-5 el-5 el-5";
+    }
+}

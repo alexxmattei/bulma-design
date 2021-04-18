@@ -12,7 +12,14 @@
 
 
 
-body { background-color: var(--site-pure-black); }
+body { 
+    background-color: var(--site-pure-black); 
+}
+
+.logo-nav {
+    width: 6.25rem;
+    height: 1rem;
+}
 
 .center-simple-landing {
     display: flex;
@@ -113,7 +120,7 @@ body { background-color: var(--site-pure-black); }
 
 @media (max-width: 1024px) {
     .hero {
-        background: black url("/src/assets/tesla-roadster-tablet.jpg") center / cover;
+        background: black url("/src/assets/tesla-roadster-desktop.jpg") center / cover;
     }
 }
 
