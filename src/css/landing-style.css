@@ -10,15 +10,13 @@
     --site-primary: rgb(65, 250, 194);
 }
 
-
-
 body { 
     background-color: var(--site-pure-black); 
 }
 
 .logo-nav {
-    width: 6.25rem;
-    height: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .center-simple-landing {
@@ -69,8 +67,65 @@ body {
 }
 
 .hero {
-    background: black url("/src/assets/tesla-roadster-desktop.jpg") center / cover;
+    background: rgb(255, 255, 255) url("/assets/img/desk-workspace.jpg") center / cover;
 }
+
+.hero-body {
+    background: rgb(255, 255, 255) url("/assets/img/desk-workspace-icr.jpg") center / cover;
+    z-index: 1;
+    height: 730px;
+}
+
+.hero-body-cover {
+    background: linear-gradient(180deg, rgba(189, 8, 8, 0) 10%, #c4c4c4 40%);
+    height: 61rem;
+    z-index: 2;
+}
+
+.about-section {
+    background: white url("/assets/img/tools-workspace-resize.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+/* #bdbdbd */
+.about-section::after{
+    content: ' ';
+    background: linear-gradient(180deg, #c1c0c0 50%, rgba(189, 8, 8, 0) 80%);
+    position: absolute;
+    z-index: 2;
+    height: 60%;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    opacity: 0.8;   
+}
+
+.contact-section {
+    /* background: linear-gradient(180deg, rgba(218, 218, 218, 0.842) 30%, #9c9c9c 80%); */
+    background: white url("/assets/img/contact-original.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-section::after {
+    content: ' ';
+    background: linear-gradient(0deg, #c1c0c0 50%, rgba(184, 184, 184, 0.527) 90%);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    opacity: 0.82;  
+}
+
 
 /* embed bulma w/ css grid */
 
@@ -112,6 +167,41 @@ body {
         height: 300px;
 }
 
+.navbar-logo {
+    width: 3.75rem;
+    height: 3rem;
+}
+
+.p-nav-color {
+    color: black;
+}
+
+.subtitle-h1 {
+    color: rgba(252, 252, 252, 0.644);
+}
+
+.subtitle-h2 {
+    color: rgba(252, 252, 252, 0.836);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-item-button {
+    /* background: linear-gradient(125deg, rgba(187, 187, 187, 0.568) 65%, #cfcfcfb9 40%); */
+    opacity: 0.65;
+    box-shadow: 3px 3px rgba(129, 129, 129, 0.386);
+}
+
+.nav-item-button:hover {
+    background-color: rgba(128, 128, 128, 0.514);
+    box-shadow: 2px 2px rgba(255, 255, 255, 0.24);
+    text-shadow: 10px;
+}
+
+.nav-item-button:hover p {
+    color: rgba(255, 255, 255, 0.815);
+}
+
 @media (max-width: 672px) {
     :root {
         font-size: 90%;
@@ -120,12 +210,46 @@ body {
 
 @media (max-width: 1024px) {
     .hero {
-        background: black url("/src/assets/tesla-roadster-desktop.jpg") center / cover;
+        background: white url("/assets/img/desk-workspace.jpg") center / cover;
+    }
+
+    .hero-body {
+        background: white url("/assets/img/desk-workspace-icr.jpg") center/ cover;
+    }
+    .hero-body-cover {
+        background: linear-gradient(180deg, rgba(189, 8, 8, 0) 10%, #c4c4c4 40%);
+        height: 90em;
+        z-index: 2;
+    }
+    .about-section {
+        background: white url("/assets/img/tools-workspace-resize.jpg");
+        background-size: center / cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 696px) {
     .hero {
-        background: black url("/src/assets/tesla-roadster-mobile.jpg") center / cover;
+        background: white url("/assets/img/desk-workspace.jpg") center / cover;
     }
+
+    .hero-body {
+        background: white url("/assets/img/desk-workspace-icr.jpg") center / cover;
+    }
+    .hero-body-cover {
+        background: linear-gradient(180deg, rgba(189, 8, 8, 0) 10%, #c4c4c4 40%);
+        height: 210em;
+        z-index: 2;
+    }
+    .about-section {
+        background: white url("/assets/img/tools-workspace-resize.jpg");
+        background-size: center / cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+    }
+    
 }
+
